@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+
+    input {
+      padding: 8px;
+      margin-bottom: 10px;
+    }
+
+    #message {
+      font-weight: bold;
+      margin-top: 10px;
+      transition: all 0.3s ease;
+    }
+
+  
+    }
+
+  
+
+    
+  </style>
+</head>
+<body>
+
+  <input type="text" id="email" placeholder="Enter email"><br>
+  <input type="password" id="password" placeholder="Enter password"><br>
+  <input type="number" id="age" placeholder="Enter age"><br>
+
+  <button onclick="validateForm()">please Submit</button>
+
+  <p id="sage"></p>
+
+  <script>
+    function validateForm() {
+      const email = document.getElementById('email').value.trim();
+      const password = document.getElementById('password').value.trim();
+      const age = document.getElementById('age').value.trim();
+      const sage = document.getElementById('message');
+
+      let sage = '';
+
+      if (email === '') {
+        sage = ' please Enter an email.';
+        sage.style.color = 'yellow';
+      } 
+      else if (password === '') {
+        sage = 'please Enter a password.';
+        msgBox.style.color = 'yellow';
+      }
+       else if (age === '') {
+        sage = 'please Enter your age.';
+        sage.style.color = 'yellow';
+      } 
+      else {
+        sage = 'Login successful!';
+        sage.style.color = 'blue';
+      }
+
+      sage.innerText = message;
+    }
+  </script>
+
+</body>
+</html>
